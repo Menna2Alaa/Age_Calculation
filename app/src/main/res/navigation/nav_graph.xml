@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_Fragment">
+
+    <fragment
+        android:id="@+id/appFragment2"
+        android:name="com.example.age_calculation.AppFragment"
+        android:label="App Labels"
+        tools:layout="@layout/fragment_app">
+        <action
+            android:id="@+id/action_appFragment2_to_dateFragment"
+            app:destination="@id/dateFragment" />
+        <action
+            android:id="@+id/action_appFragment2_to_birthFragment"
+            app:destination="@id/birthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dateFragment"
+        android:name="com.example.age_calculation.DateFragment"
+        android:label="Days between two dates"
+        tools:layout="@layout/fragment_date" />
+    <fragment
+        android:id="@+id/birthFragment"
+        android:name="com.example.age_calculation.BirthFragment"
+        android:label="Day Of My Birth"
+        tools:layout="@layout/fragment_birth" />
+    <fragment
+        android:id="@+id/login_Fragment"
+        android:name="com.example.age_calculation.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login_">
+        <action
+            android:id="@+id/action_login_Fragment_to_appFragment2"
+            app:destination="@id/appFragment2" />
+    </fragment>
+</navigation>
