@@ -2,4 +2,6 @@
 <resources>
     <style name="Theme.Age_Calculation" parent="android:Theme.Material.Light.NoActionBar" />
     <style name="DatePicker" parent="android:Theme.Material.Light.NoActionBar"/>
-</resources>
+    <style name="Theme.AppCompat" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Theme attributes -->
+    </style></resources>

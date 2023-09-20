@@ -1,7 +1,7 @@
 package com.example.age_calculation.ui.theme
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -12,7 +12,7 @@ import com.example.age_calculation.R
 import com.example.age_calculation.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var toolbar : Toolbar
@@ -25,11 +25,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        navController = Navigation.findNavController(this,R.id.Nav_Host)
+        navController = Navigation.findNavController(this, R.id.Nav_Host)
 
         toolbar = binding.toolbar
         val fragments :MutableSet<Int> = HashSet()
